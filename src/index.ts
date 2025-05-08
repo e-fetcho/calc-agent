@@ -61,10 +61,10 @@ const sseEvent = (targetStr: string, res: Response, messageType: String) => {
   res.write(`data: ${JSON.stringify(content)}\n\n`);
 };
 
-async function handleQueryMain(query: string, res: Response): Promise<string> {
-  const llm = await ChatModel.fromName(
-    "watsonx:ibm/granite-3-8b-instruct"
-  );
+//async function handleQueryMain(query: string, res: Response): Promise<string> {
+//  const llm = await ChatModel.fromName(
+//    "watsonx:ibm/granite-3-8b-instruct"
+//  );
 
   memory.reset();
   const agent = new BeeAgent({
